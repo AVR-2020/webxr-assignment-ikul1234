@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Figurine Shop</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="Vivi" src="img/kirby.jpg">
+        <img id="viewButton" src="img/view.png">
+        <img id="Noivern" src="img/Noivern.jpg">
+        <img id="R2D2" src="img/r2d2.jpg">
+        <img id="logo" src="img/Toy+Vault+Logo+(NEW)+copy.png">
+        <img id="addtocart" src="img/addtocart.png">
+      </a-assets>
+      <a-camera position="0 1 0" id="myCamera">
+        <a-cursor intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
+      </a-camera>
+    
+    <a-image id="logopic"src="#logo" position="0 4 -2"></a-image>
+    <a-image id="ViviOri"src="#Vivi" position="-1 3 -2"></a-image>
+    <a-image id="view1"src="#viewButton" position="-1 2.5 -1.8" width="0.5" height="0.25"></a-image>
+    <a-image id="addtocartbutton"src="#addtocart" position="-1 2.2 -1.8" width="0.75" height="0.3"></a-image>
+    <a-image id="NoivernFig"src="#Noivern" position="0 3 -2"></a-image>
+    <a-image id="view2"src="#viewButton" position="0 2.5 -1.8" width="0.5" height="0.25"></a-image>
+    <a-image id="addtocartbutton"src="#addtocart" position="0 2.2 -1.8" width="0.75" height="0.3"></a-image>
+    <a-image id="R2D2Fig"src="#R2D2" position="1 3 -2"></a-image>
+    <a-image id="view3"src="#viewButton" position="1 2.5 -1.8" width="0.5" height="0.25"></a-image>
+    <a-image id="addtocartbutton"src="#addtocart" position="1 2.2 -1.8" width="0.75" height="0.3"></a-image>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#696969"></a-plane>
+      <a-sky color="#808080"></a-sky>
+    </a-scene>
+  </body>
+  <script>
+      document
+      .querySelector("#view1")
+      .addEventListener('click', function(){
+        location.href = "kirby/kirby.html";
+      });
+      document
+      .querySelector("#view2")
+      .addEventListener('click', function(){
+        location.href = "noivern/noivern.html";
+      });
+      document
+      .querySelector("#view3")
+      .addEventListener('click', function(){
+        location.href = "r2d2/r2d2.html";
+      });
+  </script>
+</html>
